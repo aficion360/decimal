@@ -1,0 +1,36 @@
+{
+  "name": "decimal",
+  "version": "0.1.0",
+  "description": "A simple arbitrary-precision Decimal type for TypeScript",
+  "keywords": [
+    "Decimal",
+    "TypeScript",
+    "Immutable"
+  ],
+  "author": "aficion360",
+  "license": "MIT",
+  "main": "lib/decimal.js",
+  "types": "lib/decimal.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.5"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aficion360/decimal.git"
+  }
+}

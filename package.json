@@ -1,21 +1,28 @@
 {
-  "name": "decimal",
-  "version": "0.1.0",
-  "description": "A simple arbitrary-precision Decimal type for TypeScript",
+  "name": "@aficion360/decimal",
+  "version": "1.0.0",
+  "description": "A simple arbitrary-precision Decimal class for TypeScript",
   "keywords": [
-    "Decimal",
-    "TypeScript",
-    "Immutable"
+    "decimal",
+    "typescript",
+    "immutable",
+    "money",
+    "monetary"
   ],
   "author": "aficion360",
   "license": "MIT",
-  "main": "lib/decimal.js",
-  "types": "lib/decimal.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^24.9.1",
@@ -32,5 +39,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aficion360/decimal.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/aficion360/decimal/issues"
+  },
+  "homepage": "https://github.com/aficion360/decimal"
 }
